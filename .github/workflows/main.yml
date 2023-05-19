@@ -2,11 +2,6 @@ name: Build and deploy
 
 on: [push, pull_request]
 
-env:
-  # This is the name of the Unity project folder
-  PROJECT_PATH: UnityBuildExample # You can set it to the root of the repo if your Unity project is in the root
-  UNITY_VERSION: 2021.24.1f1 # It should ideally match what devs use locally
-
 jobs:
   buildAndTestForLinuxBasedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
@@ -15,9 +10,9 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - $PROJECT_PATH
+          - ./
         unityVersion:
-          - $UNITY_VERSION
+          - 2021.24.1f1
         targetPlatform:
           - StandaloneLinux64 # Build a Linux 64-bit standalone.
           - WebGL # WebGL.
@@ -70,9 +65,9 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - $env:PROJECT_PATH
+          - ./
         unityVersion:
-          - $env:UNITY_VERSION
+          - 2021.24.1f1
         targetPlatform:
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
 
@@ -112,9 +107,9 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - $PROJECT_PATH
+          - ./
         unityVersion:
-          - $UNITY_VERSION
+          - 2021.24.1f1
         targetPlatform:
           - StandaloneOSX # Build a macOS standalone.
 
