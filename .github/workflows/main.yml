@@ -15,9 +15,9 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - ${{ env.PROJECT_PATH }}
+          - $PROJECT_PATH
         unityVersion:
-          - ${{ env.UNITY_VERSION }}
+          - $UNITY_VERSION
         targetPlatform:
           - StandaloneLinux64 # Build a Linux 64-bit standalone.
           - WebGL # WebGL.
@@ -70,9 +70,9 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - ${{ env.PROJECT_PATH }}
+          - $env:PROJECT_PATH
         unityVersion:
-          - ${{ env.UNITY_VERSION }}
+          - $env:UNITY_VERSION
         targetPlatform:
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
 
@@ -112,9 +112,9 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - ${{ env.PROJECT_PATH }}
+          - $PROJECT_PATH
         unityVersion:
-          - ${{ env.UNITY_VERSION }}
+          - $UNITY_VERSION
         targetPlatform:
           - StandaloneOSX # Build a macOS standalone.
 
