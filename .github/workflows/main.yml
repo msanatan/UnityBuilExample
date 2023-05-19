@@ -12,7 +12,7 @@ jobs:
         projectPath:
           - ./
         unityVersion:
-          - 2021.24.1f1
+          - 2021.3.24f1
         targetPlatform:
           - StandaloneLinux64 # Build a Linux 64-bit standalone.
           - WebGL # WebGL.
@@ -67,7 +67,7 @@ jobs:
         projectPath:
           - ./
         unityVersion:
-          - 2021.24.1f1
+          - 2021.3.24f1
         targetPlatform:
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
 
@@ -109,7 +109,7 @@ jobs:
         projectPath:
           - ./
         unityVersion:
-          - 2021.24.1f1
+          - 2021.3.24f1
         targetPlatform:
           - StandaloneOSX # Build a macOS standalone.
 
