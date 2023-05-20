@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   buildAndTestForLinuxBasedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
@@ -48,7 +48,7 @@ jobs:
 
   buildForWindowsBasedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
-    runs-on: windows-2019
+    runs-on: windows-2022
     strategy:
       fail-fast: false
       matrix:
@@ -91,7 +91,7 @@ jobs:
 
   buildForMacOSBasedPlatforms:
     name: Build for ${{ matrix.targetPlatform }}
-    runs-on: macos-latest
+    runs-on: macos-13
     strategy:
       fail-fast: false
       matrix:
